@@ -1,0 +1,16 @@
+<button mat-fab color="accent" [matMenuTriggerFor]="menu">
+  <mat-icon aria-hidden="false" aria-label="Example home icon">shopping_cart</mat-icon> {{ products.length }}
+</button>
+<mat-menu #menu="matMenu">
+  <ng-container *ngIf="products.length !== 0; else empty">
+    <ng-container *ngFor="let product of products; trackBy: trackByItems">
+      <button mat-menu-item>
+        Id: {{ product.id }} Title: {{ product.title }}
+      </button>
+    </ng-container>
+  </ng-container>
+</mat-menu>
+
+<ng-template #empty>
+  <p style="padding: 0 8px;">No items in cart</p>
+</ng-template>
