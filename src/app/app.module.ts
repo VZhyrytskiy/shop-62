@@ -20,6 +20,7 @@ import { HeaderComponent } from './header/components/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
+    // на следующей итерации поправьте название компонента
     FirstComponentComponent,
     ProductComponent,
     ProductListComponent,

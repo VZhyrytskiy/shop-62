@@ -6,7 +6,7 @@ import { ProductModel } from '../models/product.model';
   providedIn: 'root'
 })
 export class ProductsService {
-  products = ProductsConfig;
+  products = ProductsConfig;  // название как-то не очень соответствует данным, можеь быть ProductsData
   constructor() { }
 
   getProducts(): ProductModel[] {

@@ -16,6 +16,6 @@ export class ProductComponent implements OnInit {
   }
 
   onAddToCart(): void {
-    console.log('Product has been buyed')
+    console.log('Product has been buyed'); // https://english-verbs.ru/grammar/buy
   }
 }
