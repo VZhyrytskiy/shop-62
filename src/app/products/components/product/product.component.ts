@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ProductModel } from '../../models/product.model';
+import { Component, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
+import { ProductAvailableModel, ProductModel } from '../../models/product.model';
 import { ProductPaths } from '../../config/products.config';
 
 @Component({
@@ -7,15 +7,13 @@ import { ProductPaths } from '../../config/products.config';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
-  @Input() product!: ProductModel;
+export class ProductComponent {
+  @Input() product!: ProductAvailableModel;
+  @Output() productToCart = new EventEmitter<ProductAvailableModel>();
   text = 'Buy';
   path = ProductPaths;
 
-  ngOnInit(): void {
-  }
-
   onAddToCart(): void {
-    console.log('Product has been buyed')
+    this.productToCart.emit(this.product);
   }
 }

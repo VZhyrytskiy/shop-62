@@ -1,0 +1,19 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-counter {
+        margin: 0 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &-button {
+        min-width: 30px;
+    }
+
+    &-number {
+        padding: 0 8px;
+    }
+}

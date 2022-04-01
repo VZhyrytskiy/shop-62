@@ -1,0 +1,8 @@
+<header #header>
+  <div class="container flex-end">
+    <button class="cart-button" mat-fab color="accent" (click)="emitToParent()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >shopping_cart</mat-icon> {{ productCount.value }}
+    </button>
+  </div>
+</header>

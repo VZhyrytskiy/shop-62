@@ -1,0 +1,17 @@
+@import "vars";
+
+header {
+  background-color: $primary;
+  padding: 16px;
+  width: 100%;
+  z-index: 9;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.gap {
+  padding-top: 120px;
+}

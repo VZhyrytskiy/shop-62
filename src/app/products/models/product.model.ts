@@ -3,5 +3,10 @@ export interface ProductModel {
     title: string,
     imageUrl: string,
     description: string,
-    price: number
+    price: number,
+
+}
+
+export interface ProductAvailableModel extends ProductModel{
+    isAvailable: boolean;
 }

@@ -1,2 +1,22 @@
-<shop-header></shop-header>
-<router-outlet></router-outlet>
+<mat-sidenav-container (backdropClick)="checkMenuOPened()">
+  <mat-sidenav
+    #sidenav
+    mode="over"
+    from="right"
+    class="sidenav"
+    fixedInViewport="fixed"
+    fixedTopGap="0"
+    fixedBottomGap="0"
+    [opened]="opened"
+  >
+    <shop-cart-list></shop-cart-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <shop-header (emitSideNav)="checkOpened($event)"></shop-header>
+    <div class="title">
+      <h1 #appTitle></h1>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

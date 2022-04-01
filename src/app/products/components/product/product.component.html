@@ -1,10 +1,17 @@
 <mat-card>
   <mat-card-title>{{ product.title }}</mat-card-title>
   <mat-card-subtitle>{{ product.description }}</mat-card-subtitle>
-  <img [src]="path.imagePath" mat-card-image>
-  <mat-card-actions align="end">
-    <button mat-raised-button color="primary" (click)="onAddToCart()">
+  <img [src]="path.imagePath" mat-card-image />
+  <mat-card-actions align="end" class="aviability">
+    <ng-container *ngIf="product.isAvailable; else out_of_stock">
+      <span class="aviability-text"> In Stock | {{ product.price | currency }} </span>
+    </ng-container>
+    <button mat-raised-button color="primary" [disabled]="!product.isAvailable" (click)="onAddToCart()">
       {{ text }}
     </button>
   </mat-card-actions>
 </mat-card>
+
+<ng-template #out_of_stock>
+  <span class="aviability-text aviability-text__out"> Out of stock </span>
+</ng-template>

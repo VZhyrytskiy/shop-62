@@ -1,0 +1,34 @@
+<div mat-menu-item class="item" [hightlight]="900">
+  <button
+  (click)="deleteItem(item.product.id)"
+    mat-icon-button
+    color="primary"
+    aria-label="Example icon button with a home icon"
+  >
+    <mat-icon>delete</mat-icon>
+  </button>
+
+  {{ item.product.title }} {{ item.product.price | currency }}
+  <div class="item-counter">
+    <button
+      class="item-button"
+      (click)="decrease(item.product.id)"
+      mat-stroked-button
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+      [disabled]="disabled"
+    >
+      -
+    </button>
+    <div class="item-number">{{ item.num }}</div>
+    <button
+      class="item-button"
+      (click)="increase(item.product.id)"
+      mat-stroked-button
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+    >
+      +
+    </button>
+  </div>
+</div>

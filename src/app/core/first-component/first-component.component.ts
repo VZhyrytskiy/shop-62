@@ -6,7 +6,7 @@ import { Category } from './first-component.config';
   templateUrl: './first-component.component.html',
   styleUrls: ['./first-component.component.scss'],
 })
-export class FirstComponentComponent implements OnInit {
+export class FirstComponent implements OnInit {
   name!: string;
   description!: string;
   price!: number;

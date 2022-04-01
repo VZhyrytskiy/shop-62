@@ -2,6 +2,10 @@
   flex: 1 1 calc(33% - 12px);
   margin: 0 8px 16px;
   min-width: 250px;
+
+  &:last-child {
+    flex: 0 0 calc(33% - 12px);
+  }
 }
 
 :host {

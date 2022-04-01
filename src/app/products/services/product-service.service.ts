@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { ProductsConfig } from '../config/products.config';
-import { ProductModel } from '../models/product.model';
+import { ProductsData } from '../config/products.config';
+import { ProductAvailableModel, ProductModel } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  products = ProductsConfig;
+  products = ProductsData;
   constructor() { }
 
-  getProducts(): ProductModel[] {
+  getProducts(): ProductAvailableModel[] {
     return this.products;
   }
 }

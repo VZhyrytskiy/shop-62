@@ -1,3 +1,15 @@
 .card {
     width: 100% ;
 }
+
+.aviability {
+    align-items: center;
+
+    &-text {
+        padding: 0 16px;
+
+        &__out {
+            color: red;
+        }
+    }
+}
