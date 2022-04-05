@@ -13,6 +13,7 @@ export class CartListComponent implements OnInit, OnDestroy {
   productsInCart: CartProduct[] = [];
   cartTotal!:  BehaviorSubject<number>;
   cartSubscription!: Subscription;
+
   constructor(public cart: CartService) {}
 
   ngOnInit(): void {
@@ -31,6 +32,6 @@ export class CartListComponent implements OnInit, OnDestroy {
   }
 
   itemToDelete(id: number): void {
-    this.cart.onDeleteItem(id)
+    this.cart.onDeleteItem(id);
   }
 }

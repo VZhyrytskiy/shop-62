@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row flex-h-between">
-    <ng-container *ngFor="let product of products">
-      <shop-product (productToCart)="addToCart($event)" class="card" [product]="product"></shop-product>
-    </ng-container>
+    <shop-product *ngFor="let product of products" class="card"
+      [product]="product"
+      (productToCart)="addToCart($event)" >
+    </shop-product>
   </div>
 </div>

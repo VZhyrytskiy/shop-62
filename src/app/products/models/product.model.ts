@@ -7,6 +7,3 @@ export interface ProductModel {
 
 }
 
-export interface ProductAvailableModel extends ProductModel{
-    isAvailable: boolean;
-}

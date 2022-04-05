@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewInit{
     this.opened = event;
   }
 
-  checkMenuOPened() {
+  checkMenuOpened() {
     this.opened = false;
   }
 }

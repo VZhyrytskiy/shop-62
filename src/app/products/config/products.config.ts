@@ -1,4 +1,4 @@
-import { ProductAvailableModel, ProductModel } from '../models/product.model';
+import { ProductAvailableModel, ProductModel } from '../models';
 
 export enum ProductPaths {
     imagePath = '../assets/product/woocommerce-placeholder.png'

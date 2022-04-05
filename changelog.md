@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.0] - 2022-04-01
 ### Added
-- app divided into modiles
+- app divided into modules
 - modified ProductListComponent
-- prodcts can be added to the cart
+- products can be added to the cart
 - added methods: totalCost - to calculate the total amount of items in the cart, totalQuantity - to calculate the total number of items in the cart
 - CartListComponent modified to display total amount of items in the cart
 - СartItemComponent created

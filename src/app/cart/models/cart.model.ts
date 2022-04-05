@@ -1,4 +1,4 @@
-import { ProductAvailableModel } from "src/app/products/models/product.model";
+import { ProductAvailableModel } from "src/app/products/models";
 
 export interface CartProduct {
     product: ProductAvailableModel,

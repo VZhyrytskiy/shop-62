@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
-import { ProductAvailableModel, ProductModel } from '../../models/product.model';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ProductAvailableModel } from '../../models';
 import { ProductPaths } from '../../config/products.config';
 
 @Component({
